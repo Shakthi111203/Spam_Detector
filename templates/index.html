@@ -1,0 +1,45 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Spam Message Detector</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>AI Spam Detector</h1>
+
+        <p>Check whether a message is Spam or Not Spam.</p>
+
+        <textarea
+            id="message"
+            placeholder="Enter your message here..."
+            rows="5"
+        ></textarea>
+
+        <div class="buttons">
+            <button onclick="checkMessage()">
+                Check Message
+            </button>
+
+            <button class="secondary" onclick="runTests()">
+                Test 5 Messages
+            </button>
+        </div>
+
+        <h2 id="result" aria-live="polite"></h2>
+
+        <div id="tests" aria-live="polite"></div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+```
